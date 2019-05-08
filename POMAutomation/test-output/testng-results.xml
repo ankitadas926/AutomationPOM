@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-05-06T14:07:23Z" name="Default suite" finished-at="2019-05-06T14:07:45Z" duration-ms="21771">
+    <groups>
+    </groups>
+    <test started-at="2019-05-06T14:07:23Z" name="Default test" finished-at="2019-05-06T14:07:45Z" duration-ms="21771">
+      <class name="com.danube.qa.testcases.LoginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.danube.qa.testcases.LoginPageTest@37271612]" started-at="2019-05-06T14:07:23Z" name="setup" finished-at="2019-05-06T14:07:32Z" duration-ms="8436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginPageTitleTest()[pri:1, instance:com.danube.qa.testcases.LoginPageTest@37271612]" started-at="2019-05-06T14:07:32Z" name="loginPageTitleTest" finished-at="2019-05-06T14:07:32Z" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTitleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.danube.qa.testcases.LoginPageTest@37271612]" started-at="2019-05-06T14:07:32Z" name="teardown" finished-at="2019-05-06T14:07:32Z" duration-ms="612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.danube.qa.testcases.LoginPageTest@37271612]" started-at="2019-05-06T14:07:32Z" name="setup" finished-at="2019-05-06T14:07:43Z" duration-ms="10736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginPageLoginTest()[pri:2, instance:com.danube.qa.testcases.LoginPageTest@37271612]" started-at="2019-05-06T14:07:43Z" name="loginPageLoginTest" finished-at="2019-05-06T14:07:44Z" duration-ms="1340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.danube.qa.testcases.LoginPageTest@37271612]" started-at="2019-05-06T14:07:44Z" name="teardown" finished-at="2019-05-06T14:07:45Z" duration-ms="598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.danube.qa.testcases.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
