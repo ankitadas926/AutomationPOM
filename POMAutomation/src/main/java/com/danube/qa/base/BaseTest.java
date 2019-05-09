@@ -30,7 +30,7 @@ public class BaseTest {
 	public BaseTest() {
 		try {
 		prop = new Properties();
-		FileReader reader = new FileReader("C:\\Users\\ADas\\Documents\\AutomationPOM\\POMAutomation\\src\\main\\java\\com\\danube\\qa\\config\\config.proprerties");
+		FileReader reader = new FileReader("C:\\Users\\ADas\\Documents\\AutomationPOM\\POMAutomation\\src\\main\\java\\com\\danube\\qa\\config\\config.properties");
 		prop.load(reader);		
 		}
 		catch(FileNotFoundException e) {

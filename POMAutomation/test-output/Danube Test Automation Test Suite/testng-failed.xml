@@ -3,6 +3,7 @@
 <suite name="Failed suite [Danube Test Automation Test Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.danube.qa.extentReport.ExtentReportListener"/>
+    <listener class-name="com.danube.qa.util.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="Danube Test Cases(failed)">
     <parameter name="browser" value="chrome"/>
@@ -12,7 +13,6 @@
         <methods>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="loginPageLoginTest"/>
           <include name="loginPageTitleTest"/>
         </methods>
       </class> <!-- com.danube.qa.testcases.LoginPageTest -->

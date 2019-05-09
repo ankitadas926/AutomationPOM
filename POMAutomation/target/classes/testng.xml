@@ -4,6 +4,7 @@
 
 	<listeners>
 		<listener class-name="com.danube.qa.extentReport.ExtentReportListener" />
+		<listener class-name="com.danube.qa.util.AnnotationTransformer" />
 	</listeners>
 
 
