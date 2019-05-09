@@ -123,10 +123,10 @@ public class EventHandler extends BaseTest implements WebDriverEventListener {
 	}
 
 	public void onException(Throwable error, WebDriver driver) {
-		System.out.println("Exception ocuured :" + error);
+		System.out.println("Exception occured :" + error);
 		
 		try {
-			TestUtil.getScreenshot();
+			TestUtil.getScreenshot(error.getMessage());
 		} 
 		catch (IOException e) {
 			e.printStackTrace();

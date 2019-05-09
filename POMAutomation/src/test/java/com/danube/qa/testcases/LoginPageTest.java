@@ -40,24 +40,23 @@ public class LoginPageTest extends BaseTest{
 		
 	}
 	
-//	@DataProvider
-//	public Object[][] getData() {
-//		Object[][] data = TestUtil.getDataFromExcel("login");
-//		return data;
-//		
-//	}
+	@DataProvider(name = "data-provider")
+	public Object[][] getData() {
+		Object[][] testData = TestUtil.getDataFromExcel("login");
+		return testData;
+		
+	}
 	
-//	@Test(priority = 2,dependsOnMethods = {"loginPageTitleTest"}, dataProvider="getData")
-//	public void loginPageLoginTest(String username,String password) {
-//		
-//		//loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-//		//Assert.assertTrue(obj instanceof Basket);
-//		//if(execute.equalsIgnoreCase("y")) {
-//			loginPage.login(username, password);
-//			Assert.assertTrue(loginPage.isSelectContext());
-//		//}
-//		
-//	}
+	@Test(priority = 2,dependsOnMethods = {"loginPageTitleTest"},dataProvider = "data-provider")
+	public void loginPageLoginTest(String username,String password) {
+		
+		//loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		//if(execute.equalsIgnoreCase("y")) {
+			loginPage.login(username, password);
+			Assert.assertTrue(loginPage.isSelectContext());
+		//}
+		
+	}
 	
 	@AfterMethod
 	public void teardown() {

@@ -30,7 +30,7 @@ public class BaseTest {
 	public BaseTest() {
 		try {
 		prop = new Properties();
-		FileReader reader = new FileReader("C:\\Users\\ADas\\Documents\\AutomationPOM\\POMAutomation\\src\\main\\java\\com\\danube\\qa\\config\\config.properties");
+		FileReader reader = new FileReader("C:\\Users\\Devjit\\Documents\\AutomationPOM\\POMAutomation\\src\\main\\java\\com\\danube\\qa\\config\\config.properties");
 		prop.load(reader);		
 		}
 		catch(FileNotFoundException e) {
@@ -45,8 +45,10 @@ public class BaseTest {
 	
 	public static void initialization(String browser,String url) {
 		//String browserName = prop.getProperty("browser");
+		
 		String browserName = browser;
 		if(browserName.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Devjit\\Desktop\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		
