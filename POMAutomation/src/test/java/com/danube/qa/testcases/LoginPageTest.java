@@ -1,9 +1,13 @@
 package com.danube.qa.testcases;
 
+import static org.testng.Assert.assertTrue;
+
 import org.testng.Assert;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.danube.qa.base.BaseTest;
@@ -20,9 +24,11 @@ public class LoginPageTest extends BaseTest{
 		super();
 	}
 	
+	
 	@BeforeMethod
-	public void setup() {
-		initialization();
+	@Parameters({"browser","url"})
+	public void setup(String browser,String url) {
+		initialization(browser,url);
 		loginPage = new LoginPage();
 		testutil = new TestUtil();
 	}
@@ -34,11 +40,24 @@ public class LoginPageTest extends BaseTest{
 		
 	}
 	
-	@Test(priority = 2)
-	public void loginPageLoginTest() {
+	@DataProvider
+	public Object[][] getData() {
+		Object[][] data = TestUtil.getDataFromExcel("login");
+		return data;
 		
-		Object obj = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		Assert.assertTrue(obj instanceof Basket);
+	}
+	
+	@Test(priority = 2, dataProvider="getData")
+	public void loginPageLoginTest(String username,String password) {
+		
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		//Assert.assertTrue(obj instanceof Basket);
+		//if(execute.equalsIgnoreCase("y")) {
+//		System.out.println(username + ""+ password);
+//			loginPage.login(username, password);
+			Assert.assertTrue(loginPage.isSelectContext());
+		//}
+		
 	}
 	
 	@AfterMethod

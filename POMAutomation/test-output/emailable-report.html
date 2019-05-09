@@ -8,12 +8,18 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">21,771</td><td></td><td></td></tr>
+<tr><th colspan="7">Danube Test Automation Test Suite</th></tr>
+<tr><td><a href="#t0">Danube Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">6,886</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.danube.qa.testcases.LoginPageTest</td><td><a href="#m0">loginPageLoginTest</a></td><td rowspan="1">1557151663652</td><td rowspan="1">1340</td></tr><tr class="passedeven"><td><a href="#m1">loginPageTitleTest</a></td><td rowspan="1">1557151652283</td><td rowspan="1">17</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Danube Test Automation Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Danube Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.danube.qa.testcases.LoginPageTest</td><td><a href="#m0">loginPageLoginTest</a></td><td rowspan="1">1557407879310</td><td rowspan="1">801</td></tr><tr class="failedeven"><td><a href="#m1">loginPageTitleTest</a></td><td rowspan="1">1557407878646</td><td rowspan="1">39</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.danube.qa.testcases.LoginPageTest#loginPageLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.danube.qa.testcases.LoginPageTest#loginPageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Danube Test Cases</h2><h3 id="m0">com.danube.qa.testcases.LoginPageTest#loginPageLoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: loginPageLoginTest([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(org.apache.poi.xssf.usermodel.XSSFCell) lmenon,(org.apache.poi.xssf.usermodel.XSSFCell) Lavanya01]
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.danube.qa.testcases.LoginPageTest#loginPageTitleTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Cheap hotels, flights and holidays from Travel Republic] but found [Service Unavailable]
+	at com.danube.qa.testcases.LoginPageTest.loginPageTitleTest(LoginPageTest.java:39)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

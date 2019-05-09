@@ -19,6 +19,9 @@ public class LoginPage extends BaseTest{
 	@FindBy(xpath = "//div[@class='login-buttons']/button[@type = 'submit']")
 	WebElement signin;
 	
+	@FindBy(xpath ="//h1[contains(text(),'Select context')]")
+	WebElement selectContext;
+	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -50,5 +53,9 @@ public class LoginPage extends BaseTest{
 		
  		return new Basket();
 		
+	}
+	
+	public boolean isSelectContext() {
+		return selectContext.isDisplayed();
 	}
 }

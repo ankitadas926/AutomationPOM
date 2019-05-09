@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 
 import com.danube.qa.util.EventHandler;
 import com.danube.qa.util.TestUtil;
@@ -29,7 +30,7 @@ public class BaseTest {
 	public BaseTest() {
 		try {
 		prop = new Properties();
-		FileReader reader = new FileReader("C:\\Users\\ADas\\eclipse-workspace\\POMAutomation\\src\\main\\java\\com\\danube\\qa\\config\\config.proprerties");
+		FileReader reader = new FileReader("C:\\Users\\ADas\\Documents\\AutomationPOM\\POMAutomation\\src\\main\\java\\com\\danube\\qa\\config\\config.proprerties");
 		prop.load(reader);		
 		}
 		catch(FileNotFoundException e) {
@@ -41,8 +42,10 @@ public class BaseTest {
 		
 	}
 	
-	public static void initialization() {
-		String browserName = prop.getProperty("browser");
+	
+	public static void initialization(String browser,String url) {
+		//String browserName = prop.getProperty("browser");
+		String browserName = browser;
 		if(browserName.equals("chrome")) {
 			driver = new ChromeDriver();
 		}
@@ -57,7 +60,8 @@ public class BaseTest {
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIY_WAIT, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("url"));
+		//driver.get(prop.getProperty("url"));
+		driver.get(url);
 	}
 	
 	public void WaitForElementVisible(WebElement element, long timeOutInSeconds)

@@ -8,6 +8,9 @@
 
 
 	<test name="Danube Test Cases">
+		<parameter name="browser" value = "chrome" />
+		<parameter name="url" value = "https://pp.dnataagentdesktop.com/" />
+		
 		<classes>
 			<class name="com.danube.qa.testcases.LoginPageTest"></class>
 			
